@@ -3,14 +3,14 @@
 
     <item android:title="Home"
         android:id="@+id/frag1"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:icon="@drawable/home_icon"/>
     <item android:title="Appointment"
         android:id="@+id/frag2"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:icon="@drawable/appointment_icon"/>
     <item android:title="Chat"
         android:id="@+id/frag3"
-        android:icon="@drawable/ic_launcher_background"/>
-    <item android:title="Reports"
+        android:icon="@drawable/chat_icon"/>
+    <item android:title="Profile"
         android:id="@+id/frag4"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:icon="@drawable/profile_icon"/>
 </menu>

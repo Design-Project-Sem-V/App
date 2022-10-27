@@ -14,7 +14,8 @@
         tools:targetApi="31">
         <activity
             android:name=".Dashboard"
-            android:exported="false">
+            android:exported="false"
+            android:label="@string/title_activity_dashboard">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import android.os.Bundle;
-//import com.umang_rathod.hms.databinding.ActivityDashboardBinding;
 
+import android.os.Bundle;
+
+import com.umang_rathod.hms.databinding.ActivityDashboardBinding;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -45,13 +46,3 @@ public class Dashboard extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 }
-
-
-
-
-
-
-
-
-
-

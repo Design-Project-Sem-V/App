@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.HMS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/darkthemebg</item>
+        <item name="colorPrimary">#87CEFA</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

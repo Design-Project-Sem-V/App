@@ -25,11 +25,15 @@
 
             <!--            Login Or Signup-->
             <LinearLayout
+                android:id="@+id/menu"
+                android:transitionName="transition0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <!--                Login-->
                 <LinearLayout
+                    android:id="@+id/login"
+                    android:transitionName="transition1"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:orientation="vertical">
@@ -47,6 +51,8 @@
                 </LinearLayout>
                 <!--                Signup-->
                 <LinearLayout
+                    android:id="@+id/signup"
+                    android:transitionName="transition2"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:orientation="vertical"
@@ -77,6 +83,7 @@
 
                 <!--                Name                -->
                 <RelativeLayout
+                    android:transitionName="transition3"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/input_bg"
@@ -141,6 +148,7 @@
 
                 <!--                Signup Button        -->
                 <RelativeLayout
+                    android:id="@+id/signup_btn"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/btn_bg"
