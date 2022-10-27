@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(getApplicationContext(), Login.class);
-//                Pair pair = new Pair<View, String>(splashText, "screenTransition");
-            //                    ActivityOptions options =  ActivityOptions.makeSceneTransitionAnimation(SplashScreen.this, pair);
             startActivity(intent);
         },1000);
 
