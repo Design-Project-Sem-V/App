@@ -3,12 +3,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkthemebg"
+    android:padding="15dp"
     tools:context=".Fragment4">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <!--            Here :)         -->
+
+            <!--            Heading         -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:padding="2dp"
+                    android:background="@drawable/heading_grad">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="@dimen/label_font_size"
+                        android:paddingHorizontal="50dp"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/darkbg_10"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--            Data        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp">
+
+                <!--                Name            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umang Rathod"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+                <!--                Gender            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+                <!--                ID            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="202051154"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+                <!--                Age            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19 Years"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+                <!--                Email            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="rathodumang319@gmail.com"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+                <!--                Phone            -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/profile_data_mb"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/light_white"
+                        android:textSize="@dimen/profile_label_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91 6353324687"
+                        android:fontFamily="@font/poppins"
+                        android:textColor= "@color/white"
+                        android:textSize="@dimen/profile_data_size"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textSize="18sp"
+                    android:textColor="@color/primary_color"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginEnd="10dp"/>
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/edit_icon"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textSize="18sp"
+                    android:textColor="@color/danger_color"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginEnd="10dp"/>
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/logout_icon"/>
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

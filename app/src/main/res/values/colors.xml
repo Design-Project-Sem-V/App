@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="darkthemebg">#121212</color>
+    <color name="light_white">#999999</color>
+    <color name="primary_color">#00BFFF</color>
+    <color name="danger_color">#FF0000</color>
 </resources>

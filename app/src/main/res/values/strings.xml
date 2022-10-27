@@ -6,4 +6,19 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+
+
+
+    <!--    Quotes     -->
+    <string name="quote1">Medicines cure diseases but only doctors can cure patients.</string>
+<!--    <string name="quote2"></string>-->
+<!--    <string name="quote3"></string>-->
+<!--    <string name="quote4"></string>-->
+<!--    <string name="quote5"></string>-->
+<!--    <string name="quote6"></string>-->
+<!--    <string name="quote7"></string>-->
+<!--    <string name="quote8"></string>-->
+<!--    <string name="quote9"></string>-->
+<!--    <string name="quote10"></string>-->
 </resources>

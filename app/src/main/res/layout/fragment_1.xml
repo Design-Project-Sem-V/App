@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/darkthemebg"
     android:padding="15dp"
     tools:context=".Fragment1">
@@ -19,9 +20,361 @@
             <!--            Top bar       -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/greet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello,"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dear!"
+                        android:textColor="@color/primary_color"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:alpha="0.25"
+                    android:src="@drawable/stethoscope" />
             </RelativeLayout>
+
+            <!--            Quote       -->
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginVertical="15dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"/>
+
+
+            <!--            Take Appointment        -->
+            <LinearLayout
+                android:id="@+id/take_appointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Take Appointment"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/open_link_icon"/>
+            </LinearLayout>
+            
+
+            <!--            Best Doctors        -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Doctors"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/doctor_grad"
+                        android:padding="1dp"
+                        android:layout_marginEnd="15dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/doctor_img_width"
+                            android:layout_height="@dimen/doctor_img_height"
+                            app:cardCornerRadius="15dp"
+                            android:layout_centerInParent="true">
+                            <ImageView
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height"
+                                android:src="@drawable/dp"
+                                android:scaleType="fitXY"/>
+                            <RelativeLayout
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentBottom="true"
+                                    android:padding="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Umang Rathod(MS)"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Heart Surgeon"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10 Yrs+ Experience"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/doctor_grad"
+                        android:padding="1dp"
+                        android:layout_marginEnd="15dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/doctor_img_width"
+                            android:layout_height="@dimen/doctor_img_height"
+                            app:cardCornerRadius="15dp"
+                            android:layout_centerInParent="true">
+                            <ImageView
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height"
+                                android:src="@drawable/dp"
+                                android:scaleType="fitXY"/>
+                            <RelativeLayout
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentBottom="true"
+                                    android:padding="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Umang Rathod(MS)"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Heart Surgeon"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10 Yrs+ Experience"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/doctor_grad"
+                        android:padding="1dp"
+                        android:layout_marginEnd="15dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/doctor_img_width"
+                            android:layout_height="@dimen/doctor_img_height"
+                            app:cardCornerRadius="15dp"
+                            android:layout_centerInParent="true">
+                            <ImageView
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height"
+                                android:src="@drawable/dp"
+                                android:scaleType="fitXY"/>
+                            <RelativeLayout
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentBottom="true"
+                                    android:padding="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Umang Rathod(MS)"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Heart Surgeon"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10 Yrs+ Experience"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/doctor_grad"
+                        android:padding="1dp"
+                        android:layout_marginEnd="15dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/doctor_img_width"
+                            android:layout_height="@dimen/doctor_img_height"
+                            app:cardCornerRadius="15dp"
+                            android:layout_centerInParent="true">
+                            <ImageView
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height"
+                                android:src="@drawable/dp"
+                                android:scaleType="fitXY"/>
+                            <RelativeLayout
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentBottom="true"
+                                    android:padding="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Umang Rathod(MS)"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Heart Surgeon"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10 Yrs+ Experience"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/doctor_grad"
+                        android:padding="1dp"
+                        android:layout_marginEnd="15dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/doctor_img_width"
+                            android:layout_height="@dimen/doctor_img_height"
+                            app:cardCornerRadius="15dp"
+                            android:layout_centerInParent="true">
+                            <ImageView
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height"
+                                android:src="@drawable/dp"
+                                android:scaleType="fitXY"/>
+                            <RelativeLayout
+                                android:layout_width="@dimen/doctor_img_width"
+                                android:layout_height="@dimen/doctor_img_height">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentBottom="true"
+                                    android:padding="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Umang Rathod(MS)"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Heart Surgeon"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10 Yrs+ Experience"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="12sp"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            
+            
+
+
 
         </LinearLayout>
     </ScrollView>

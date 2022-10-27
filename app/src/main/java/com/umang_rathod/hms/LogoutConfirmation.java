@@ -7,20 +7,19 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Fragment4#newInstance} factory method to
+ * Use the {@link LogoutConfirmation#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment4 extends Fragment {
+public class LogoutConfirmation extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,7 +30,7 @@ public class Fragment4 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Fragment4() {
+    public LogoutConfirmation() {
         // Required empty public constructor
     }
 
@@ -41,11 +40,11 @@ public class Fragment4 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment4.
+     * @return A new instance of fragment LogoutConfirmation.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment4 newInstance(String param1, String param2) {
-        Fragment4 fragment = new Fragment4();
+    public static LogoutConfirmation newInstance(String param1, String param2) {
+        LogoutConfirmation fragment = new LogoutConfirmation();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,30 +64,42 @@ public class Fragment4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View parentHolder = inflater.inflate(R.layout.fragment_4, container, false);
+
+        View parentHolder = inflater.inflate(R.layout.fragment_logout_confirmation, container, false);
 
 
-        //Fragment management
-        FragmentManager fragmentManager = getParentFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        RelativeLayout cancelBtn = parentHolder.findViewById(R.id.cancel), confirmBtn = parentHolder.findViewById(R.id.confirm);
 
-        LinearLayout editProfile = (LinearLayout) parentHolder.findViewById(R.id.editProfile), logout = (LinearLayout) parentHolder.findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
+
+        // Cancel
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentTransaction.replace(R.id.frameLayout, new LogoutConfirmation());
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frameLayout, new Fragment4());
                 fragmentTransaction.commit();
             }
         });
 
-        editProfile.setOnClickListener(new View.OnClickListener() {
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentTransaction.replace(R.id.frameLayout, new EditProfile());
-                fragmentTransaction.commit();
+
+                Toast.makeText(getActivity(), "You have successfully logged out!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity(), Login.class);
+                startActivity(intent);
             }
         });
+
+
 
         return parentHolder;
     }
+
+
+
+
+
 }

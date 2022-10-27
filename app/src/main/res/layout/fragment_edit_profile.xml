@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/darkthemebg"
+    tools:context=".EditProfile">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--            Heading         -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:padding="2dp"
+                    android:background="@drawable/heading_grad">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Profile"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="@dimen/label_font_size"
+                        android:paddingHorizontal="50dp"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/darkbg_10"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--            Form        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_profile_bg">
+
+                <!--                Full Name       -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="16sp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Umang Rathod"
+                        android:inputType="textAutoComplete"
+                        android:paddingVertical="5dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/light_white"
+                        android:textSize="14sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.25dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="0dp"/>
+                </LinearLayout>
+
+                <!--                Gender          -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="16sp"/>
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/radioGroup">
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  Male"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins"
+                            android:checked="false"
+                            android:textSize="14dp"
+                            android:layout_marginEnd="25dp"/>
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   Female"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins"
+                            android:checked="false"
+                            android:textSize="14dp"
+                            android:layout_marginEnd="25dp"/>
+                        <RadioButton
+                            android:id="@+id/radioOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   Other"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins"
+                            android:checked="false"
+                            android:textSize="14dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!--                DOB       -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Birthday"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="16sp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/birthdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13/01/2003"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins"/>
+                        <ImageView
+                            android:id="@+id/open_calendar"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/calendar_icon"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <!--                Save Changes        -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/save_changes"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/btn_bg"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="@dimen/input_mv">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins"
+                            android:padding="10dp"
+                            android:text="Save Changes"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
