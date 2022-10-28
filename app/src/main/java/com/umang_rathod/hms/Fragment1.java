@@ -5,6 +5,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Fragment1 extends Fragment {
@@ -50,6 +54,17 @@ public class Fragment1 extends Fragment {
         //Fragment management
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+
+        // ArrayList (Collection of data for doctors view)
+        ArrayList<DoctorModel> allDoctors = new ArrayList<>();
+        for (int i=1; i<=10; i++){
+            allDoctors.add(new DoctorModel(R.drawable.dp, "Umang Rathod", "MS", "Heart Surgeon", "12 Yrs+"));
+        }
+        RecyclerView doctorsView = parentHolder.findViewById(R.id.doctorsList);
+        doctorsView.setLayoutManager(new GridLayoutManager(getActivity(), 10));
+        DoctorCardAdapter adapter1 = new DoctorCardAdapter(getActivity(), allDoctors);
+        doctorsView.setAdapter(adapter1);
 
 
         // Hooks
