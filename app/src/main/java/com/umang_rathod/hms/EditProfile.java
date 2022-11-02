@@ -1,6 +1,10 @@
 package com.umang_rathod.hms;
 
+import static android.content.Context.MODE_APPEND;
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.DatePickerDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -76,13 +80,27 @@ public class EditProfile extends Fragment {
         int mHour;
         int mMinute;
 
+        // Hooks
+        ImageView openCalendar = parentHolder.findViewById(R.id.open_calendar);
+        TextView birthDate = parentHolder.findViewById(R.id.birthdate);
+        RelativeLayout saveChanges = parentHolder.findViewById(R.id.save_changes);
+
         // Fragment management
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        ImageView openCalendar = parentHolder.findViewById(R.id.open_calendar);
-        TextView birthDate = parentHolder.findViewById(R.id.birthdate);
-        RelativeLayout saveChanges = parentHolder.findViewById(R.id.save_changes);
+        // Shared Preferences
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("DESIGNPROJECTSEMVUSERDETAILS", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+        //Get default data
+        String birthday = sharedPreferences.getInt("birthdate", 0) + " / " + sharedPreferences.getInt("birthmonth", 0) + " / "
+                 + sharedPreferences.getInt("birthyear", 0);
+
+        // Set Default data
+        birthDate.setText(birthday);
+
 
         openCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,16 +110,17 @@ public class EditProfile extends Fragment {
                 mMonth[0] = c.get(Calendar.MONTH);
                 mDay[0] = c.get(Calendar.DAY_OF_MONTH);
 
-
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
                         new DatePickerDialog.OnDateSetListener() {
-
                             @Override
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
 
-                                birthDate.setText(dayOfMonth + " / " + (monthOfYear + 1) + " / " + year);
+                                editor.putInt("birthdate", dayOfMonth);
+                                editor.putInt("birthmonth", monthOfYear+1);
+                                editor.putInt("birthyear", year);
 
+                                birthDate.setText(dayOfMonth + " / " + (monthOfYear + 1) + " / " + year);
                             }
                         }, mYear[0], mMonth[0], mDay[0]);
                 datePickerDialog.show();

@@ -6,21 +6,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkthemebg"
-    android:padding="15dp"
     tools:context=".Login">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:padding="2dp"
-        android:background="@drawable/login_signup_grad">
+        android:layout_height="match_parent">
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/darkbg_15"
             android:orientation="vertical"
-            android:layout_centerInParent="true"
             android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_black"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:transitionName="transition0"/>
+
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="75dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/logo" />-->
+<!--            </RelativeLayout>-->
+            <TextView
+                android:id="@+id/hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Hello 👋,"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/hello_font_size"
+                android:textStyle="bold"
+                android:transitionName="transition1"/>
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome back!"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="22sp"
+                android:transitionName="transition2"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_signup_dark_bg"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp">
 
 
             <!--            Login Or Signup-->
@@ -30,44 +84,23 @@
                 android:orientation="horizontal">
                 <!--                Login-->
                 <LinearLayout
-                    android:id="@+id/login"
-                    android:transitionName="transition1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
-                        android:text="Login"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/label_font_size"
-                        android:textStyle="bold" />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/white"/>
-                </LinearLayout>
-                <!--                Signup-->
-                <LinearLayout
-                    android:id="@+id/signup"
-                    android:transitionName="transition2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:id="@+id/heading"
+                    android:transitionName="transition3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp">
+                    android:layout_marginBottom="15dp">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Signup"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/label_font_size"
+                        android:textAlignment="center"
+                        android:text="Login"
+                        android:textColor="@color/primary_color"
+                        android:textSize="22sp"
                         android:textStyle="bold" />
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"/>
                 </LinearLayout>
+
             </LinearLayout>
 
 
@@ -81,12 +114,15 @@
 
                 <!--                Email                -->
                 <RelativeLayout
+                    android:id="@+id/email_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/input_bg"
-                    android:layout_marginVertical="@dimen/input_mv">
+                    android:layout_marginVertical="@dimen/input_mv"
+                    android:transitionName="transition4">
 
                     <EditText
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -94,7 +130,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="Email"
                         android:inputType="textEmailAddress"
-                        android:padding="10dp"
+                        android:padding="15dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="12sp" />
@@ -102,12 +138,15 @@
 
                 <!--                Password        -->
                 <RelativeLayout
+                    android:id="@+id/password_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/input_bg"
-                    android:layout_marginVertical="@dimen/input_mv">
+                    android:layout_marginVertical="@dimen/input_mv"
+                    android:transitionName="transition5">
 
                     <EditText
+                        android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -115,7 +154,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="Password"
                         android:inputType="textPassword"
-                        android:padding="10dp"
+                        android:padding="15dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="12sp" />
@@ -124,10 +163,10 @@
 
                 <!--                Login Button        -->
                 <RelativeLayout
-                    android:id="@+id/login_btn"
-                    android:transitionName="transition3"
+                    android:id="@+id/submit"
+                    android:transitionName="transition6"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/btn_bg"
                     android:layout_marginVertical="@dimen/input_mv">
 
@@ -136,17 +175,181 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/poppins"
-                        android:padding="10dp"
+                        android:padding="15dp"
                         android:text="Login"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
                 </RelativeLayout>
 
+                <!--                or signup-->
+                <LinearLayout
+                    android:id="@+id/signup"
+                    android:transitionName="transition7"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="15dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:text="Don't have any acconut? Create one"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
 
-
     </RelativeLayout>
 </RelativeLayout>
+
+
+
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_centerVertical="true"-->
+<!--android:padding="2dp"-->
+<!--android:background="@drawable/login_signup_grad">-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/darkbg_15"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_centerInParent="true"-->
+<!--    android:padding="15dp">-->
+
+
+<!--    &lt;!&ndash;            Login Or Signup&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        &lt;!&ndash;                Login&ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/login"-->
+<!--            android:transitionName="transition1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:orientation="vertical">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:text="Login"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/label_font_size"-->
+<!--                android:textStyle="bold" />-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/white"/>-->
+<!--        </LinearLayout>-->
+<!--        &lt;!&ndash;                Signup&ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/signup"-->
+<!--            android:transitionName="transition2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginLeft="15dp">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:text="Signup"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/label_font_size"-->
+<!--                android:textStyle="bold" />-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"/>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+
+
+<!--    &lt;!&ndash;            Form        &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="-5dp">-->
+
+<!--        &lt;!&ndash;                Email                &ndash;&gt;-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/input_bg"-->
+<!--            android:layout_marginVertical="@dimen/input_mv">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/email"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:hint="Email"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:padding="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:textSize="12sp" />-->
+<!--        </RelativeLayout>-->
+
+<!--        &lt;!&ndash;                Password        &ndash;&gt;-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/input_bg"-->
+<!--            android:layout_marginVertical="@dimen/input_mv">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/password"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:hint="Password"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:padding="10dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:textSize="12sp" />-->
+<!--        </RelativeLayout>-->
+
+
+<!--        &lt;!&ndash;                Login Button        &ndash;&gt;-->
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/login_btn"-->
+<!--            android:transitionName="transition3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/btn_bg"-->
+<!--            android:layout_marginVertical="@dimen/input_mv">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Login"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="14sp" />-->
+<!--        </RelativeLayout>-->
+
+
+<!--    </LinearLayout>-->
+<!--</LinearLayout>-->
+
+
+
+<!--</RelativeLayout>-->

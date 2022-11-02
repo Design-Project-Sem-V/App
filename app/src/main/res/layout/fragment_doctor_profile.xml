@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkthemebg"
+    android:padding="@dimen/whole_screen_padding"
+    tools:context=".DoctorProfile">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="62.5dp"
+            android:padding="15dp"
+            android:background="@drawable/edit_profile_bg">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr. Umang Rathod"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="50dp"
+                android:paddingVertical="2dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/degree_and_speciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="( MS )"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:paddingVertical="2dp"/>
+            <TextView
+                android:id="@+id/experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15 Yrs+ Experience"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins"
+                android:paddingVertical="2dp"
+                android:textSize="16sp"/>
+
+            <!--            Call & Message-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <!--                Call      -->
+                    <RelativeLayout
+                        android:id="@+id/call"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="20dp"
+                        android:background="@drawable/call_btn_bg">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/call_icon" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/poppins"
+                                android:text="Call"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="15dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--                Message     -->
+                    <RelativeLayout
+                        android:id="@+id/message"
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="15dp"
+                        android:background="@drawable/message_btn_bg"
+                        android:layout_alignParentEnd="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/message_icon" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/poppins"
+                                android:text="Message"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="15dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+        
+        
+        
+        <!--        DP      -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/doctor_dp_width"
+                android:layout_height="@dimen/doctor_dp_height"
+                app:cardCornerRadius="5000dp"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/profile_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dp"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+</FrameLayout>

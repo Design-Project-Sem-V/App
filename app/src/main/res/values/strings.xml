@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HMS</string>
+    <string name="app_name">Hospitsy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_dashboard">Dashboard</string>
@@ -8,17 +8,23 @@
     <string name="title_notifications">Notifications</string>
 
 
-
-
     <!--    Quotes     -->
     <string name="quote1">Medicines cure diseases but only doctors can cure patients.</string>
-<!--    <string name="quote2"></string>-->
-<!--    <string name="quote3"></string>-->
-<!--    <string name="quote4"></string>-->
-<!--    <string name="quote5"></string>-->
-<!--    <string name="quote6"></string>-->
-<!--    <string name="quote7"></string>-->
-<!--    <string name="quote8"></string>-->
-<!--    <string name="quote9"></string>-->
-<!--    <string name="quote10"></string>-->
+    <!--    <string name="quote2"></string>-->
+    <!--    <string name="quote3"></string>-->
+    <!--    <string name="quote4"></string>-->
+    <!--    <string name="quote5"></string>-->
+    <!--    <string name="quote6"></string>-->
+    <!--    <string name="quote7"></string>-->
+    <!--    <string name="quote8"></string>-->
+    <!--    <string name="quote9"></string>-->
+    <!--    <string name="quote10"></string>-->
+
+    <!--    Blogs headings-->
+    <string name="blog_heading_1">Ways to Manage Stress</string>
+    <string name="blog_heading_2">Prevent diabetes before it starts</string>
+    <string name="blog_heading_3">Safe Ways to Gain Weight</string>
+    <string name="blog_heading_4">What is a Heart Attack?</string>
+    <string name="blog_heading_5">Cancer prevention tips</string>
+
 </resources>

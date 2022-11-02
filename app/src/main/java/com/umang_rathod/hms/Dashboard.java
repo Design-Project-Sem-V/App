@@ -45,4 +45,8 @@ public class Dashboard extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
     }
+
+    //Stop to go to back
+    @Override
+    public void onBackPressed(){}
 }
